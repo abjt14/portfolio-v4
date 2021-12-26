@@ -30,7 +30,7 @@
 			-window.innerHeight*.15,
 			0
 		);
-		new ScrollParallaxElement('#information .content .image img', -window.innerHeight*.3, 0);
+		new ScrollParallaxElement('#information .content .image img', -window.innerHeight*.5, 0);
 		// scroll parallax end
 	})
 
@@ -339,12 +339,13 @@
 			@media screen and (max-width: 650px) {
 				flex-direction: column;
 				gap: 2rem;
-				padding-bottom: 1rem;
+				margin-bottom: 7.5rem;
 			}
 		}
 
 		@media screen and (max-width: 650px) {
 			padding: 1rem;
+			min-height: unset;
 		}
 	}
 </style>

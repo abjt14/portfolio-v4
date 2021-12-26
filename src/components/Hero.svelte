@@ -48,19 +48,15 @@
 		<h1>
 			<span>
 				Hello. I am Abhijeet.
-				<div class="after"></div>
 			</span>
 			<span>
 				I build engaging experiences for
-				<div class="after"></div>
 			</span>
 			<span>
 				my audience with pixel perfect
-				<div class="after"></div>
 			</span>
 			<span>
 				and performant applications.
-				<div class="after"></div>
 			</span>
 		</h1>
 		<button id="view-resume-btn" on:click={downloadResume} class="backdrop-filter-hue-rotate">
@@ -108,16 +104,6 @@
 					position: relative;
 					overflow: hidden;
 					will-change: transform;
-
-					.after {
-						position: absolute;
-						top: 0;
-						left: 0;
-						transform: translateY(120%);
-						background-color: #fff;
-						width: 100%;
-						height: 100%;
-					}
 				}
 
 				@media screen and (max-width: 650px) {
@@ -179,10 +165,16 @@
 					}
 				}
 			}
+
+			@media screen and (max-width: 650px) {
+				margin: 10vh 0 5vh 0;
+			}
 		}
 
 		@media screen and (max-width: 650px) {
 			padding: 1rem;
+			min-height: unset;
+			margin: 5vh 0;
 		}
 	}
 </style>

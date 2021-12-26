@@ -70,7 +70,6 @@
 		h2 {
 			font-family: "Inter", sans-serif;
 			font-size: 2.16rem;
-			line-height: 2.5rem;
 			font-weight: 200;
 			max-width: 75%;
 
@@ -95,7 +94,6 @@
 				font-family: "Inter", sans-serif;
 				font-weight: 300;
 				font-size: 1.5rem;
-				line-height: 1.83rem;
 				padding: 1.5rem;
 				border: 2px solid #000;
 				color: #000;
