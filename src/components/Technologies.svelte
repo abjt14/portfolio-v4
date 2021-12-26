@@ -20,7 +20,7 @@
 
 		// scroll parallax
 		document.querySelectorAll('#technologies .tech-names .name').forEach(element => {
-			let rand = getRandomArbitrary(-.5, .5);
+			let rand = getRandomArbitrary(-.025, .025);
 			new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, window.innerWidth*rand, 0, 'x');
 		})
 		// scroll parallax end
