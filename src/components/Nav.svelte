@@ -7,10 +7,14 @@
 		})
 
 		const scrollToInformation = () => {
-			window.scrollTo({
-				top: document.body.getBoundingClientRect().height,
-				behavior: 'smooth'
-			});
+			if (window.innerWidth > 650) {
+				window.scrollTo({
+					top: document.body.getBoundingClientRect().height,
+					behavior: 'smooth'
+				});
+			} else {
+				document.querySelector('#information').scrollIntoView({behavior: "smooth"});
+			}
 		}
 
 		const scrollToTop = () => {

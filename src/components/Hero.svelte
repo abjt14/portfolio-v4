@@ -25,10 +25,7 @@
 				behavior: 'smooth'
 			});
 		} else {
-			window.scrollTo({
-				top: document.querySelector('#technologies').getBoundingClientRect().top*.95,
-				behavior: 'smooth'
-			});
+			document.querySelector('#technologies').scrollIntoView({behavior: "smooth"});
 		}
 	}
 
