@@ -24,6 +24,12 @@
 				let rand = getRandomArbitrary(-.025, .025);
 				new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, window.innerWidth*rand, 0, 'x');
 			})
+
+			new ScrollParallaxElement('#technologies h2 span', window.innerHeight*.5, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(2)', window.innerHeight*.5, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(3)', window.innerHeight*.5, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(4)', window.innerHeight*.5, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(5)', window.innerHeight*.5, 0);
 			// scroll parallax end
 		}
 	})

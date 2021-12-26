@@ -22,7 +22,7 @@
 
 	onMount(() => {
 		// scroll parallax
-		new ScrollParallaxElement('#information', -window.innerHeight*.2, 0);
+		// new ScrollParallaxElement('#information', -window.innerHeight*.2, 0);
 		new ScrollParallaxElement('#information .content .text span:nth-child(1)', -window.innerHeight*.05, 0);
 		new ScrollParallaxElement('#information .content .text span:nth-child(2)', -window.innerHeight*.1, 0);
 		new ScrollParallaxElement(

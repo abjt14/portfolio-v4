@@ -110,7 +110,11 @@
       });
     }
 
-    smoothScroll("main", "#content", 0.3);
+		if (window.innerWidth > 650) {
+    	smoothScroll("main", "#content", .3);
+		} else {
+    	smoothScroll("main", "#content", 0.001);
+		}
 		// ********** code for smooth scrolling end **********
 
     // gsap init
