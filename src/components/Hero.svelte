@@ -10,7 +10,7 @@
 			downloadClicked = true;
 			let link = document.createElement("a");
 			link.download = 'Abhijeet Singh_Resume';
-			link.href = './assets/resume/resume.pdf';
+			link.href = './assets/resume/Abhijeet Singh_Resume.pdf';
 			link.click();
 			setTimeout(() => {
 				downloadClicked = false;
