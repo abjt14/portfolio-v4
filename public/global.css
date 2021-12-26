@@ -5,6 +5,7 @@ html, body {
 	overscroll-behavior: none;
 	-webkit-overscroll-behavior: none;
 	-moz-overscroll-behavior: none;
+	text-rendering: optimizeLegibility;
 }
 
 body {

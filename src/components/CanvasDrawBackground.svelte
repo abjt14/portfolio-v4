@@ -20,13 +20,15 @@
 			const canvas = document.querySelector('canvas');
 			const context = canvas.getContext('2d');
 
-			canvas.height = innerHeight;
-			canvas.width = innerWidth;
+			canvas.height = window.innerHeight;
+			canvas.width = window.innerWidth;
 
-			window.addEventListener('resize', (e) => {
-				canvas.height = innerHeight;
-				canvas.width = innerWidth;
-			})
+			if (window.innerWidth > 650) {
+				window.addEventListener('resize', (e) => {
+					canvas.height = window.innerHeight;
+					canvas.width = window.innerWidth;
+				})
+			}
 
 			document.querySelector('html').addEventListener('mousemove', (e) => {
 				if (drawing) {
@@ -36,18 +38,18 @@
 					context.lineCap = "round";
 					context.lineTo(e.clientX, e.clientY);
 					context.strokeStyle = selectedColor;
-					context.lineWidth = innerWidth / 7;
+					context.lineWidth = window.innerWidth / 7;
 					if (isMobile) {
-						context.lineWidth = innerHeight / 5;
+						context.lineWidth = window.innerHeight / 5;
 					} else {
-						context.lineWidth = innerWidth / 6.5;
+						context.lineWidth = window.innerWidth / 6.5;
 					}
 					context.stroke();
 
 					if (isMobile) {
-						context.arc(e.clientX, e.clientY, innerHeight / 10, 0, 2 * Math.PI);
+						context.arc(e.clientX, e.clientY, window.innerHeight / 10, 0, 2 * Math.PI);
 					} else {
-						context.arc(e.clientX, e.clientY, innerWidth / 13, 0, 2 * Math.PI);
+						context.arc(e.clientX, e.clientY, window.innerWidth / 13, 0, 2 * Math.PI);
 					}
 					context.fillStyle = selectedColor;
 					context.fill();
@@ -84,8 +86,8 @@
 					bgcCanvasHelper.style.top = y + 'px';
 					bgcCanvasHelper.style.left = x + 'px';
 					bgcCanvasHelper.style.backgroundColor = selectedColor;
-					bgcCanvasHelper.style.height = innerHeight > innerWidth ? `${innerHeight*2.5}px` : `${innerWidth*2.5}px`;
-					bgcCanvasHelper.style.width = innerHeight > innerWidth ? `${innerHeight*2.5}px` : `${innerWidth*2.5}px`;
+					bgcCanvasHelper.style.height = window.innerHeight > window.innerWidth ? `${window.innerHeight*2.5}px` : `${window.innerWidth*2.5}px`;
+					bgcCanvasHelper.style.width = window.innerHeight > window.innerWidth ? `${window.innerHeight*2.5}px` : `${window.innerWidth*2.5}px`;
 					bgcCanvasHelper.style.transform = 'translate(-50%, -50%) scale(1)';
 
 					setTimeout(() => {
