@@ -12,7 +12,6 @@
 			link.download = 'Abhijeet Singh_Resume';
 			link.href = '/assets/resume/resume.pdf';
 			link.click();
-			link.remove();
 			setTimeout(() => {
 				downloadClicked = false;
 			}, 1000);
