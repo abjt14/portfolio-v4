@@ -16,38 +16,43 @@
 	})
 
 	onMount(() => {
-		const main = document.querySelector('main');
-
 		// scroll event listener
 		document.addEventListener('scroll', (e) => {
 			let offset = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 			scrolledRatio.update(s => offset);
-
-			gsap.to('main', {
-					duration: .4,
-					y: -(main.getBoundingClientRect().height - window.innerHeight)*offset,
-					ease: "Power1.easeOut"
-				}
-			)
 		})
-		// scroll event listener end
+		if (window.innerWidth > 650) {
+			const main = document.querySelector('main');
 
-		pageHeight.update(s => main.getBoundingClientRect().height);
-		document.body.style.height = `${pageHeightInner}px`;
+			// scroll event listener
+			document.addEventListener('scroll', (e) => {
+				let offset = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+				gsap.to('main', {
+						duration: .4,
+						y: -(main.getBoundingClientRect().height - window.innerHeight)*offset,
+						ease: "Power1.easeOut"
+					}
+				)
+			})
+			// scroll event listener end
 
-		window.addEventListener('resize', (e) => {
+			pageHeight.update(s => main.getBoundingClientRect().height);
 			document.body.style.height = `${pageHeightInner}px`;
 
-			let offset = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-			scrolledRatio.update(s => offset);
+			window.addEventListener('resize', (e) => {
+				document.body.style.height = `${pageHeightInner}px`;
 
-			gsap.to('main', {
-					duration: .4,
-					y: -(main.getBoundingClientRect().height - window.innerHeight)*offset,
-					ease: "Power1.easeOut"
-				}
-			)
-		})
+				let offset = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+				scrolledRatio.update(s => offset);
+
+				gsap.to('main', {
+						duration: .4,
+						y: -(main.getBoundingClientRect().height - window.innerHeight)*offset,
+						ease: "Power1.easeOut"
+					}
+				)
+			})
+		}
 
 		// gsap init
 		const gsapInitTimeline = gsap.timeline();
@@ -86,6 +91,12 @@
 		left: 0;
 		min-height: 100vh;
 		width: 100%;
+
+		@media screen and (max-width: 650px) {
+			position: relative;
+			top: unset;
+			left: unset;
+		}
 	}
 
 	:global(html) {

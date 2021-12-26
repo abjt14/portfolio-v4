@@ -33,6 +33,7 @@
 		new ScrollParallaxElement('#information .content .image img', -window.innerHeight*.3, 0);
 		// scroll parallax end
 	})
+
 	// email copy to clipboard
 	const copyEmailToClipBoard = () => {
 		if(window.innerWidth > 650) {

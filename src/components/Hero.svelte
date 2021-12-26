@@ -3,11 +3,20 @@
 	import { MagneticElement } from '../helpers/magneticElement.js';
 	import { ScrollParallaxElement } from '../helpers/scrollParallax';
 
+	let downloadClicked = false;
+
 	const downloadResume = () => {
-		var link = document.createElement("a");
-    link.download = 'Abhijeet Singh_Resume';
-    link.href = '/assets/resume/resume.pdf';
-    link.click();
+		if (!downloadClicked) {
+			downloadClicked = true;
+			let link = document.createElement("a");
+			link.download = 'Abhijeet Singh_Resume';
+			link.href = '/assets/resume/resume.pdf';
+			link.click();
+			link.remove();
+			setTimeout(() => {
+				downloadClicked = false;
+			}, 1000);
+		}
 	}
 
 	const scrollToTechnologies = () => {

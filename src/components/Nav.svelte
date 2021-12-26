@@ -71,6 +71,7 @@
 				font-weight: 500;
 				font-size: 1.25rem;
 				transition: color .3s ease;
+				color: #000;
 
 				@media screen and (max-width: 650px) {
 					font-size: 1.75rem;

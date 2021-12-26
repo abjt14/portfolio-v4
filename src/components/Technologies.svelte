@@ -4,26 +4,28 @@
 
 	onMount(() => {
 		// switch tech stack init
-		const switchTechStacks = () => {
-			let techs =  document.querySelectorAll('#technologies .tech-names .name');
-		}
+		// const switchTechStacks = () => {
+		// 	let techs =  document.querySelectorAll('#technologies .tech-names .name');
+		// }
 
-		switchTechStacks();
-		setInterval(() => {
-			switchTechStacks();
-		}, 2500);
+		// switchTechStacks();
+		// setInterval(() => {
+		// 	switchTechStacks();
+		// }, 2500);
 		// switch tech stacks end
 
-		const getRandomArbitrary = (min, max) => {
-			return Math.random() * (max - min) + min;
-		}
+		if (window.innerWidth > 650) {
+			const getRandomArbitrary = (min, max) => {
+				return Math.random() * (max - min) + min;
+			}
 
-		// scroll parallax
-		document.querySelectorAll('#technologies .tech-names .name').forEach(element => {
-			let rand = getRandomArbitrary(-.025, .025);
-			new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, window.innerWidth*rand, 0, 'x');
-		})
-		// scroll parallax end
+			// scroll parallax
+			document.querySelectorAll('#technologies .tech-names .name').forEach(element => {
+				let rand = getRandomArbitrary(-.025, .025);
+				new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, window.innerWidth*rand, 0, 'x');
+			})
+			// scroll parallax end
+		}
 	})
 
 </script>
