@@ -146,7 +146,7 @@
 <svelte:head>
   <meta
     name="description"
-    content="Hello. I am Abhijeet. I build engaging experiences for my audience with pixel perfect and performant applications."
+    content="I build engaging web-based experiences for my audience."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
