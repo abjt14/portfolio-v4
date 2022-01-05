@@ -25,7 +25,7 @@
 <div id="contact">
 	<div class="content">
 		<div class="label">
-			Lets build something together
+			Lets build something together 🤝
 		</div>
 		<div class="email">
 			<a href="mailto:abhijeetsinghmain@gmail.com">
@@ -85,8 +85,8 @@
 
 			.label {
 				font-weight: 600;
-				font-size: 1.5rem;
-				color: rgba(0, 0, 0, 0.5);
+				font-size: 3.66rem;
+				color: hsl(0deg 0% 50%);
 
 				@media screen and (max-width: 650px) {
 					font-weight: 700;

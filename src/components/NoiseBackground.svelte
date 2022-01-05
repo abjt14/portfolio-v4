@@ -1,6 +1,6 @@
 <div id="noise-bg"></div>
 
-<style>
+<style lang="scss">
 	#noise-bg {
 		position: fixed;
 		top: -50%;
@@ -15,6 +15,10 @@
 		z-index: 100;
 		pointer-events: none;
 		opacity: 1;
+
+		@media screen and (max-width: 650px) {
+			animation: none;
+		}
 	}
 
 	@keyframes noise {

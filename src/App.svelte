@@ -184,7 +184,27 @@
   }
 
   :global(html) {
-    font-size: 16px;
+    font-size: 1vw;
+
+		@media screen and (max-width: 2200px) {
+			font-size: 22px;
+		}
+
+		@media screen and (max-width: 2000px) {
+			font-size: 20px;
+		}
+
+		@media screen and (max-width: 1800px) {
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 1600px) {
+			font-size: 16px;
+		}
+
+		@media screen and (max-width: 1400px) {
+			font-size: 14px;
+		}
 
 		@media screen and (max-width: 1200px) {
     	font-size: 14px;

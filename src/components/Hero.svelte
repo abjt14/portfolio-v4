@@ -119,7 +119,7 @@
 				}
 
 				@media screen and (max-width: 650px) {
-					margin-top: 25vh;
+					margin-top: 15vh;
 					line-height: unset;
 					font-size: 2rem;
 				}

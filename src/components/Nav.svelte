@@ -122,7 +122,7 @@
 			cursor: pointer;
 
 			@media screen and (max-width: 650px) {
-				font-size: 3rem;
+				font-size: 2rem;
 			}
 		}
 
@@ -168,10 +168,10 @@
 		#mobile-menu-toggle {
 			display: none;
 			align-self: center;
-				align-items: center;
+			align-items: center;
 
 			svg {
-				height: 2rem;
+				height: 1.5rem;
     		width: auto;
 			}
 
