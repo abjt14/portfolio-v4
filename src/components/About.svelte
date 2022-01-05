@@ -15,17 +15,16 @@
 <div id="about">
 	<div class="content">
 		<div class="text">
-			Vancouver based developer who loves to add creativity and life into his work.
+			<span>I'm a Vancouver based developer who loves to add creativity and life into his work.</span>
 			<br><br>
-			My go-to tech stack is Vanilla JavaScript and Sass with Webpack for my projects.
+			I have a <span>Bachelor's degree</span> and a <span>PG Diploma</span> in my field and have worked as a software engineer for over an year. 
+			My go-to tech stack is <span>Vanilla JavaScript</span> and <span>Sass</span> with <span>Webpack</span> for my projects.
 			<br><br>
-			I have a Bachelor's degree and a PG diploma in my field and have worked as a software engineer for a brand design agency called Outlined for over a year, delivering a design platform for enterprises to generate and manage brand assets on a large scale.
-			<br><br>
-			Built 2 web apps, 1 marketing website, and a mobile app as part of my academic projects.
+			I am a big-time musicophile with a passion for art and human psychology.
 		</div>
-		<div class="image">
+		<!-- <div class="image">
 			<img src="./assets/images/portrait/main.webp" alt="Abhijeet's portrait">
-		</div>
+		</div> -->
 	</div>
 </div>
 
@@ -33,6 +32,8 @@
 	#about {
 		padding: 10vw 2rem;
 		color: #000;
+		max-width: 70vw;
+		margin: 0 auto;
 
 		.content {
 			display: flex;
@@ -41,10 +42,15 @@
 
 			.text {
 				color: inherit;
-				font-size: 1.66rem;
+				font-size: 2.16rem;
 				line-height: 2rem;
-				font-weight: 400;
-				flex: 3;
+				font-weight: 200;
+				flex: 5;
+				line-height: 1.3;
+
+				span {
+					font-weight: 400;
+				}
 
 				@media screen and (max-width: 650px) {
 					line-height: unset;
@@ -53,7 +59,7 @@
 			}
 
 			.image {
-				flex: 1;
+				flex: 2;
 
 				img {
 					border-radius: .5rem;
@@ -67,6 +73,8 @@
 
 		@media screen and (max-width: 650px) {
 			padding: 5rem 1rem;
+			max-width: unset;
+			margin: unset;
 		}
 	}
 	.marquee {

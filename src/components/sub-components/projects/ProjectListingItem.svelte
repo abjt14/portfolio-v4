@@ -2,18 +2,9 @@
 	export let number;
 	export let name;
 	export let technologies;
-	export let url;
-
-	const handleProjectClick = (url) => {
-		let link = document.createElement('a');
-		link.setAttribute('href', url);
-		link.setAttribute('target', '_blank');
-		link.setAttribute('rel', 'noopener noreferrer');
-		link.click();
-	}
 </script>
 
-<div class="item" on:click={() => handleProjectClick(url)}>
+<div class="item">
 	<div class="number">0{number}</div>
 	<div class="name">
 		{name}

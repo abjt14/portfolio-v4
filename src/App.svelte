@@ -8,6 +8,7 @@
   import Contact from "./components/Contact.svelte";
   import NoiseBackground from "./components/NoiseBackground.svelte";
   import CanvasDrawBackground from "./components/CanvasDrawBackground.svelte";
+	import ProjectModal from "./components/sub-components/projects/ProjectModal.svelte";
   import { scrolledRatio } from "./helpers/stores.js";
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
@@ -170,6 +171,7 @@
 </div>
 <CanvasDrawBackground />
 <NoiseBackground />
+<ProjectModal />
 
 <style lang="scss">
   main {

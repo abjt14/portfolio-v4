@@ -1,47 +1,95 @@
 <script>
 	import { onMount } from 'svelte';
 	import ProjectListingItem from './sub-components/projects/ProjectListingItem.svelte';
+	import
+	{
+		name,
+		type,
+		role,
+		technologies,
+		description,
+		url,
+		images,
+		modalActive
+	} from '../helpers/stores.js';
 
 	const projects = [
-		{
-			name: 'Sift Mobile Application',
-			technologies: [ 'React Native', 'NodeJS', 'GraphQL' ],
-			image: './assets/images/projects/sift-mobile-application.webp',
-			type: 'academic',
-			description: '',
-			url: 'http://www.siftapp.ca/'
-		},
 		{
 			name: 'Sift Marketing Website',
 			technologies: [ 'Sass', 'Javascript ES6', 'GSAP', 'Webpack' ],
 			image: './assets/images/projects/sift-marketing-website.webp',
-			type: 'academic',
-			description: '',
-			url: 'http://www.siftapp.ca/'
+			type: 'Academic',
+			role: 'Front-End Developer',
+			description: [
+				'Sift is a mobile application that lets users scan objects with the camera to learn how and where they can recycle them.',
+				'The marketing served the purpose of showcasing the problem at hand and the solution the app provides for it.',
+				'In order to make the website lightweight, fast, feature rich, and accessible, I decided to not use a frontend framework, and instead, use tools like Webpack for smaller bundle size, SASS for ease of development, and GSAP for lightweight and cross-browser compatible animations.'
+			],
+			url: 'http://www.siftapp.ca/',
+			images: [
+				'./assets/images/projects/sift-marketing-website.webp'
+			]
+		},
+		{
+			name: 'Sift Mobile Application',
+			technologies: [ 'React Native', 'NodeJS', 'GraphQL' ],
+			image: './assets/images/projects/sift-mobile-application.webp',
+			type: 'Academic',
+			role: 'Full Stack Developer',
+			description: [
+				'Sift is a mobile application that lets users scan objects with the camera to learn how and where they can recycle them.',
+				'For the initial research, built a web scaper using NodeJS and PuppeteerJS to collect public domain data.',
+				'Designed and developed the GraphQL APIs on a NodeJS server for faster response times and easier frontend development.',
+				'Built the search by text functionality and search result screens for the app using React Native.'
+			],
+			url: 'https://github.com/stsiqueira/Sift',
+			images: [
+				'./assets/images/projects/sift-mobile-application.webp'
+			]
 		},
 		{
 			name: 'Portfolio Concept',
 			technologies: [ 'Svelte', 'Sass', 'Javascript ES6', 'GSAP' ],
 			image: './assets/images/projects/portfolio-concept-4.webp',
-			type: 'academic',
-			description: '',
-			url: 'https://www.abjt.dev/'
+			type: 'Personal',
+			role: 'Project Owner',
+			description: [
+				'This is my Developer Portfolio, showcasing my projects, my social links, and more about my academic and professional background.',
+				'The project took me 4 weeks to complete, which includes 3 weeks of ideation as well as design, and 1 week of development.',
+				'All my previous personal projects have been built using Vanilla JavaScript, however I recently discovered Svelte and it has become my favorite way to develop web apps.',
+				'For the animations, I try to make use of CSS wherever possible to keep the web app lightweight and bundle size smaller. Although, where the animations are more complex, I used GSAP as it is a robust industry-approved animation library for JavaScript, with ample of features and really good browser support.'
+			],
+			url: 'https://www.abjt.dev/',
+			images: [
+				'./assets/images/projects/portfolio-concept-4.webp'
+			]
 		},
 		{
 			name: 'Portfolio Concept (Minimal)',
 			technologies: [ 'Sass', 'Javascript ES6', 'GSAP', 'Webpack' ],
 			image: './assets/images/projects/portfolio-concept-3.webp',
-			type: 'academic',
-			description: '',
-			url: 'https://abjt14.github.io/portfolio-concept-3'
+			type: 'Personal',
+			role: 'Project Owner',
+			description: [
+				'An experimental portfolio website with a focus on minimalism.',
+				'The approach for this website was to only make the essential information available to the user, and use it as a quick way to reach out the developer.',
+				'For the design, I made the two main sections of the page to be partially visible when the user has scrolled to top or to bottom, reducing redundancy.'
+			],
+			url: 'https://abjt14.github.io/portfolio-concept-3',
+			images: ['./assets/images/projects/portfolio-concept-3.webp']
 		},
 		{
 			name: 'Portfolio Concept (All Colors)',
 			technologies: [ 'Sass', 'Javascript ES6', 'GSAP', 'Webpack' ],
 			image: './assets/images/projects/portfolio-concept-2.webp',
-			type: 'academic',
-			description: '',
-			url: 'https://abjt14.github.io/portfolio-concept-2'
+			type: 'Personal',
+			role: 'Project Owner',
+			description: [
+				'The inspiration for this portfolio website concept comes from Vercel\'s main website. The contrasting colors on a white/black background gives of an active and modern vibe.',
+				'In order to incorporate those emotions into my website, I used CSS to rotate the hue of the text across the color wheel, making the design look lively.'
+			],
+			url: 'https://abjt14.github.io/portfolio-concept-2',
+			images: ['./assets/images/projects/portfolio-concept-2.webp']
 		},
 	]
 
@@ -57,6 +105,25 @@
 
 	const handleProjectMouseLeave = () => {
 		imageDisplayContainer.classList.remove('active');
+	}
+
+	const handleProjectClick = (
+		name_value,
+		type_value,
+		role_value,
+		technologies_value,
+		description_value,
+		url_value,
+		images_value
+	) => {
+		name.set(name_value);
+		type.set(type_value);
+		role.set(role_value);
+		technologies.set(technologies_value);
+		description.set(description_value);
+		url.set(url_value);
+		images.set(images_value);
+		modalActive.set(true);
 	}
 
 	onMount(() => {
@@ -78,12 +145,23 @@
 <div id="projects">
 	<div class="listing">
 		{#each projects as project, i}
-			<div on:mouseenter={() => handleProjectMouseEnter(i)} on:mouseleave={handleProjectMouseLeave}>
+			<div
+				on:mouseenter={() => handleProjectMouseEnter(i)}
+				on:mouseleave={handleProjectMouseLeave}
+				on:click={() => handleProjectClick(
+					project.name,
+					project.type,
+					project.role,
+					project.technologies,
+					project.description,
+					project.url,
+					project.images
+				)}
+			>
 				<ProjectListingItem
 					number={i + 1}
 					name={project.name}
 					technologies={project.technologies}
-					url={project.url}
 				/>
 			</div>
 		{/each}
@@ -91,6 +169,7 @@
 	<div class="display" bind:this={imageDisplayContainer}>
 		<img bind:this={imageDisplayElement} id="project-display-image" src="./assets/images/projects/sift-mobile-application.webp" alt="screenshot of selected project">
 	</div>
+	<span class="hint">← Hover the projects to discover.</span>
 </div>
 
 <style lang="scss">
@@ -99,6 +178,7 @@
 		z-index: 3;
 		display: grid;
 		grid-template-columns: 5fr 4fr;
+		position: relative;
 
 		* {
 			z-index: 3;
@@ -156,6 +236,23 @@
 				opacity: 1;
 				transform: translateX(0vw);
 			}
+
+			@media screen and (max-width: 650px) {
+				display: none;
+			}
+		}
+
+		.hint {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+    	left: calc(100% - 2rem);
+			transform: translate(-100%, -50%);
+			width: fit-content;
+			font-size: 2rem;
+			text-align: center;
+			z-index: 2;
+			pointer-events: none;
 
 			@media screen and (max-width: 650px) {
 				display: none;

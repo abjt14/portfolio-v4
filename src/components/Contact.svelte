@@ -75,6 +75,8 @@
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
+		max-width: 70vw;
+		margin: 0 auto;
 
 		.content {
 			display: flex;
@@ -87,6 +89,10 @@
 				font-weight: 600;
 				font-size: 3.66rem;
 				color: hsl(0deg 0% 50%);
+
+				@media screen and (max-width: 1200px) {
+					font-size: 3rem;
+				}
 
 				@media screen and (max-width: 650px) {
 					font-weight: 700;
@@ -218,6 +224,8 @@
 
 		@media screen and (max-width: 650px) {
 			padding: 1rem;
+			max-width: unset;
+			margin: unset;
 		}
 	}
 </style>
