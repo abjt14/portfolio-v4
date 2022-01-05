@@ -2,8 +2,10 @@
   import { onMount } from "svelte";
   import Nav from "./components/Nav.svelte";
   import Hero from "./components/Hero.svelte";
+  import Projects from "./components/Projects.svelte";
   import Technologies from "./components/Technologies.svelte";
-  import Information from "./components/Information.svelte";
+  import About from "./components/About.svelte";
+  import Contact from "./components/Contact.svelte";
   import NoiseBackground from "./components/NoiseBackground.svelte";
   import CanvasDrawBackground from "./components/CanvasDrawBackground.svelte";
   import { scrolledRatio } from "./helpers/stores.js";
@@ -134,11 +136,11 @@
         stagger: 0.125,
       })
       .from(
-        "#view-resume-btn",
+        "#go-to-contact-cta",
         { duration: 1, xPercent: -10, autoAlpha: 0, ease: "back.out(1.5)" },
         "-=.85"
       )
-      .from("#scroll-to-next-section", { duration: 1, autoAlpha: 0 }, "-=.75");
+      .from("#hero .cont-2 button, #hero .cont-2 a", { duration: .75, autoAlpha: 0, y: '5vh', stagger: .075 }, "-=.85");
     // gsap end
   });
 </script>
@@ -160,8 +162,10 @@
 <div id="content">
   <main>
     <Hero />
+		<Projects />
     <Technologies />
-    <Information />
+		<About />
+    <Contact />
   </main>
 </div>
 <CanvasDrawBackground />
@@ -180,14 +184,18 @@
   }
 
   :global(html) {
-    font-size: 1.15vw;
+    font-size: 16px;
+
+		@media screen and (max-width: 1200px) {
+    	font-size: 14px;
+		}
 
     @media screen and (max-width: 1000px) {
-      font-size: 1.65vw;
+    	font-size: 10px;
     }
 
     @media screen and (max-width: 650px) {
-      font-size: 3vw;
+    	font-size: 16px;
     }
   }
 
