@@ -191,6 +191,10 @@
 
 			img {
 				border-radius: 1rem;
+
+				@media screen and (max-width: 650px) {
+					border-radius: .5rem;
+				}
 			}
 
 			:global(img:nth-child(1)) {

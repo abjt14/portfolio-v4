@@ -1,5 +1,3 @@
-<script></script>
-
 <div class="marquee">
 	<div class="marquee__inner" aria-hidden="true">
 		{#each Array.from(Array(18).keys()) as a}

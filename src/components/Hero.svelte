@@ -22,16 +22,16 @@
 			// magnetize
 			new MagneticElement('#go-to-contact-cta');
 			// magnetize end
-		}
 
-		// scroll parallax
-		new ScrollParallaxElement('#hero .cont-1 h1', 0, window.innerHeight*.2);
-		new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(1)', 0, -window.innerWidth*.06, 'x');
-		new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(2)', 0, -window.innerWidth*.01, 'x');
-		new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(3)', 0, -window.innerWidth*.03, 'x');
-		new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(4)', 0, -window.innerWidth*.09, 'x');
-		new ScrollParallaxElement('#hero .cont-2', 0, window.innerHeight*.6);
-		// scroll parallax end
+			// scroll parallax
+			new ScrollParallaxElement('#hero .cont-1 h1', 0, window.innerHeight*.2);
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(1)', 0, -window.innerWidth*.06, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(2)', 0, -window.innerWidth*.01, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(3)', 0, -window.innerWidth*.03, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(4)', 0, -window.innerWidth*.09, 'x');
+			new ScrollParallaxElement('#hero .cont-2', 0, window.innerHeight*.6);
+			// scroll parallax end
+		}
 	})
 </script>
 

@@ -1,7 +1,4 @@
 <script>
-	import { onMount } from "svelte";
-	import { ScrollParallaxElement } from '../helpers/scrollParallax';
-
 	// email copy email to clipboard
 	let copyEmailToClipboardButton;
 	let copied = false;
@@ -17,9 +14,6 @@
 		}
 	}
 	// email copy email to clipboard end
-
-	onMount(() => {
-	})
 </script>
 
 <div id="contact">

@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import ProjectListingItem from './sub-components/projects/ProjectListingItem.svelte';
 	import
 	{
@@ -136,9 +135,6 @@
 		images.set(images_value);
 		modalActive.set(true);
 	}
-
-	onMount(() => {
-	})
 </script>
 
 <div class="marquee">

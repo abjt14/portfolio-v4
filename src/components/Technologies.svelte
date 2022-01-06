@@ -3,17 +3,6 @@
 	import { ScrollParallaxElement } from '../helpers/scrollParallax';
 
 	onMount(() => {
-		// switch tech stack init
-		// const switchTechStacks = () => {
-		// 	let techs =  document.querySelectorAll('#technologies .tech-names .name');
-		// }
-
-		// switchTechStacks();
-		// setInterval(() => {
-		// 	switchTechStacks();
-		// }, 2500);
-		// switch tech stacks end
-
 		if (window.innerWidth > 650) {
 			const getRandomArbitrary = (min, max) => {
 				return Math.random() * (max - min) + min;
