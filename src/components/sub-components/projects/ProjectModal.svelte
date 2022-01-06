@@ -185,15 +185,17 @@
 
 		.images {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
 			gap: 2rem;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
 
 			img {
-				width: 100%;
+				border-radius: 1rem;
 			}
 
 			:global(img:nth-child(1)) {
-				grid-column: 1 /-1;
+				grid-column: 1 / -1;
+				width: 100%;
 			}
 
 			@media screen and (max-width: 650px) {
@@ -207,7 +209,7 @@
         font-weight: 500;
         font-size: 1rem;
         color: #fff;
-        background: hsl(0, 0, 25%);
+        background: hsl(0deg, 0%, 25%);
         padding: 0.5rem 1rem;
 				display: flex;
 				align-items: center;

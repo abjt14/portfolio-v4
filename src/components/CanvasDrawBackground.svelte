@@ -162,6 +162,7 @@
     left: 0;
     z-index: -1;
 		pointer-events: none;
+		filter: blur(1rem);
 	}
 
 	#bgc-canvas-helper {
@@ -176,5 +177,6 @@
     transform-origin: center center;
     transform: translate(-50%, -50%) scale(0);
     transition: height 1s ease,width 1s ease;
+		filter: blur(1rem);
 	}
 </style>

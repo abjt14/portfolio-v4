@@ -27,7 +27,9 @@
 			],
 			url: 'http://www.siftapp.ca/',
 			images: [
-				'./assets/images/projects/sift-marketing-website.webp'
+				'./assets/images/projects/sift-marketing-website/sift-marketing-website-1.webp',
+				'./assets/images/projects/sift-marketing-website/sift-marketing-website-2.webp',
+				'./assets/images/projects/sift-marketing-website/sift-marketing-website-3.webp',
 			]
 		},
 		{
@@ -44,7 +46,10 @@
 			],
 			url: 'https://github.com/stsiqueira/Sift',
 			images: [
-				'./assets/images/projects/sift-mobile-application.webp'
+				'./assets/images/projects/sift-mobile-application/sift-mobile-application-1.webp',
+				'./assets/images/projects/sift-mobile-application/sift-mobile-application-2.webp',
+				'./assets/images/projects/sift-mobile-application/sift-mobile-application-3.webp',
+				'./assets/images/projects/sift-mobile-application/sift-mobile-application-4.webp',
 			]
 		},
 		{
@@ -61,7 +66,9 @@
 			],
 			url: 'https://www.abjt.dev/',
 			images: [
-				'./assets/images/projects/portfolio-concept-4.webp'
+				'./assets/images/projects/portfolio-concept-4/portfolio-concept-4-1.webp',
+				'./assets/images/projects/portfolio-concept-4/portfolio-concept-4-2.webp',
+				'./assets/images/projects/portfolio-concept-4/portfolio-concept-4-3.webp',
 			]
 		},
 		{
@@ -76,7 +83,11 @@
 				'For the design, I made the two main sections of the page to be partially visible when the user has scrolled to top or to bottom, reducing redundancy.'
 			],
 			url: 'https://abjt14.github.io/portfolio-concept-3',
-			images: ['./assets/images/projects/portfolio-concept-3.webp']
+			images: [
+				'./assets/images/projects/portfolio-concept-3/portfolio-concept-3-1.webp',
+				'./assets/images/projects/portfolio-concept-3/portfolio-concept-3-2.webp',
+				'./assets/images/projects/portfolio-concept-3/portfolio-concept-3-3.webp',
+			]
 		},
 		{
 			name: 'Portfolio Concept (All Colors)',
@@ -89,7 +100,7 @@
 				'In order to incorporate those emotions into my website, I used CSS to rotate the hue of the text across the color wheel, making the design look lively.'
 			],
 			url: 'https://abjt14.github.io/portfolio-concept-2',
-			images: ['./assets/images/projects/portfolio-concept-2.webp']
+			images: ['./assets/images/projects/portfolio-concept-2/portfolio-concept-2-1.webp']
 		},
 	]
 
@@ -169,7 +180,7 @@
 	<div class="display" bind:this={imageDisplayContainer}>
 		<img bind:this={imageDisplayElement} id="project-display-image" src="./assets/images/projects/sift-mobile-application.webp" alt="screenshot of selected project">
 	</div>
-	<span class="hint">← Hover the projects to discover.</span>
+	<span class="hint">← hover the projects to discover</span>
 </div>
 
 <style lang="scss">
@@ -248,7 +259,7 @@
 			left: 100%;
     	left: calc(100% - 2rem);
 			transform: translate(-100%, -50%);
-			width: fit-content;
+			width: max-content;
 			font-size: 2rem;
 			text-align: center;
 			z-index: 2;

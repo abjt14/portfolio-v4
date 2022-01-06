@@ -22,9 +22,6 @@
 			<br><br>
 			I am a big-time musicophile with a passion for art and human psychology.
 		</div>
-		<!-- <div class="image">
-			<img src="./assets/images/portrait/main.webp" alt="Abhijeet's portrait">
-		</div> -->
 	</div>
 </div>
 
@@ -55,18 +52,6 @@
 				@media screen and (max-width: 650px) {
 					line-height: unset;
 					font-weight: 200;
-				}
-			}
-
-			.image {
-				flex: 2;
-
-				img {
-					border-radius: .5rem;
-				}
-
-				@media screen and (max-width: 650px) {
-					display: none;
 				}
 			}
 		}
