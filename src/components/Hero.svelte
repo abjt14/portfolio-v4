@@ -6,7 +6,7 @@
 
 	const scrollToContact = () => {
 		window.scrollTo({
-			top: document.querySelector('body').getBoundingClientRect().height,
+			top: document.querySelector('#contact').offsetTop,
 			behavior: 'smooth'
 		});
 	}

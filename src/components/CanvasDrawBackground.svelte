@@ -150,16 +150,18 @@
 			}
 		}
 
-		setTimeout(() => {
-			canvasDraw();
-		}, 2000);
+		if (window.innerWidth > 650) {
+			setTimeout(() => {
+				canvasDraw();
+			}, 2000);
+		}
 	})
 </script>
 
 <canvas></canvas>
 <div id="bgc-canvas-helper"></div>
 
-<style>
+<style lang="scss">
 	canvas {
 		position: fixed;
     top: 0;
@@ -167,6 +169,10 @@
     z-index: -1;
 		pointer-events: none;
 		filter: blur(1rem);
+
+		@media screen and (max-width: 650px) {
+			display: none;
+		}
 	}
 
 	#bgc-canvas-helper {
@@ -183,5 +189,9 @@
     transform: translate3d(-50%, -50%, 0) scale(0);
 		filter: blur(1rem);
     transition: height 1s ease,width 1s ease;
+
+		@media screen and (max-width: 650px) {
+			display: none;
+		}
 	}
 </style>
