@@ -104,18 +104,22 @@
 			}
 
 			document.addEventListener('touchstart', (e) => {
-				let touch = e.touches[0];
-				x = touch.clientX;
-				y = touch.clientY;
+				if (drawing) {
+					let touch = e.touches[0];
+					x = touch.clientX;
+					y = touch.clientY;
+				}
 			})
 
 			document.addEventListener('touchmove', (e) => {
-				let touch = e.touches[0];
-				const mouseEvent = new MouseEvent("mousemove", {
-					clientX: touch.clientX,
-					clientY: touch.clientY
-				});
-				document.querySelector('html').dispatchEvent(mouseEvent);
+				if (drawing) {
+					let touch = e.touches[0];
+					const mouseEvent = new MouseEvent("mousemove", {
+						clientX: touch.clientX,
+						clientY: touch.clientY
+					});
+					document.querySelector('html').dispatchEvent(mouseEvent);
+				}
 			})
 
 			const transparency = () => {
