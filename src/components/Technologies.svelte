@@ -1,9 +1,10 @@
 <script>
 	import { onMount } from "svelte";
 	import { ScrollParallaxElement } from '../helpers/scrollParallax';
+  import { innerHeight, innerWidth } from "../helpers/stores.js";
 
 	onMount(() => {
-		if (window.innerWidth > 650) {
+		if ($innerWidth > 650) {
 			const getRandomArbitrary = (min, max) => {
 				return Math.random() * (max - min) + min;
 			}
@@ -11,14 +12,14 @@
 			// scroll parallax
 			document.querySelectorAll('#technologies .tech-names .name').forEach(element => {
 				let rand = getRandomArbitrary(-.025, .025);
-				new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, window.innerWidth*rand, 0, 'x');
+				new ScrollParallaxElement(`#technologies .tech-names .name:nth-child(${Array.from(element.parentNode.children).indexOf(element) + 1})`, $innerWidth*rand, 0, 'x');
 			})
 
-			new ScrollParallaxElement('#technologies h2 span', window.innerHeight, 0);
-			new ScrollParallaxElement('#technologies h2 span:nth-child(2)', window.innerHeight, 0);
-			new ScrollParallaxElement('#technologies h2 span:nth-child(3)', window.innerHeight, 0);
-			new ScrollParallaxElement('#technologies h2 span:nth-child(4)', window.innerHeight, 0);
-			new ScrollParallaxElement('#technologies h2 span:nth-child(5)', window.innerHeight, 0);
+			new ScrollParallaxElement('#technologies h2 span', $innerHeight, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(2)', $innerHeight, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(3)', $innerHeight, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(4)', $innerHeight, 0);
+			new ScrollParallaxElement('#technologies h2 span:nth-child(5)', $innerHeight, 0);
 			// scroll parallax end
 		}
 	})

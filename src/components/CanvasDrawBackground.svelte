@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from "svelte";
+  import { innerHeight, innerWidth } from "../helpers/stores.js";
 
 	onMount(() => {
 		const canvasDraw = () => {
@@ -19,13 +20,13 @@
 			const canvas = document.querySelector('canvas');
 			const context = canvas.getContext('2d');
 
-			canvas.height = window.innerHeight;
-			canvas.width = window.innerWidth;
+			canvas.height = $innerHeight;
+			canvas.width = $innerWidth;
 
-			if (window.innerWidth > 650) {
+			if ($innerWidth > 650) {
 				window.addEventListener('resize', (e) => {
-					canvas.height = window.innerHeight;
-					canvas.width = window.innerWidth;
+					canvas.height = $innerHeight;
+					canvas.width = $innerWidth;
 				})
 			}
 
@@ -37,18 +38,18 @@
 					context.lineCap = "round";
 					context.lineTo(e.clientX, e.clientY);
 					context.strokeStyle = selectedColor;
-					context.lineWidth = window.innerWidth / 7;
+					context.lineWidth = $innerWidth / 7;
 					if (isMobile) {
-						context.lineWidth = window.innerHeight / 5;
+						context.lineWidth = $innerHeight / 5;
 					} else {
-						context.lineWidth = window.innerWidth / 6.5;
+						context.lineWidth = $innerWidth / 6.5;
 					}
 					context.stroke();
 
 					if (isMobile) {
-						context.arc(e.clientX, e.clientY, window.innerHeight / 10, 0, 2 * Math.PI);
+						context.arc(e.clientX, e.clientY, $innerHeight / 10, 0, 2 * Math.PI);
 					} else {
-						context.arc(e.clientX, e.clientY, window.innerWidth / 13, 0, 2 * Math.PI);
+						context.arc(e.clientX, e.clientY, $innerWidth / 13, 0, 2 * Math.PI);
 					}
 					context.fillStyle = selectedColor;
 					context.fill();
@@ -85,8 +86,8 @@
 					bgcCanvasHelper.style.top = y + 'px';
 					bgcCanvasHelper.style.left = x + 'px';
 					bgcCanvasHelper.style.backgroundColor = selectedColor;
-					bgcCanvasHelper.style.height = window.innerHeight > window.innerWidth ? `${window.innerHeight*2.5}px` : `${window.innerWidth*2.5}px`;
-					bgcCanvasHelper.style.width = window.innerHeight > window.innerWidth ? `${window.innerHeight*2.5}px` : `${window.innerWidth*2.5}px`;
+					bgcCanvasHelper.style.height = $innerHeight > $innerWidth ? `${$innerHeight*2.5}px` : `${$innerWidth*2.5}px`;
+					bgcCanvasHelper.style.width = $innerHeight > $innerWidth ? `${$innerHeight*2.5}px` : `${$innerWidth*2.5}px`;
 					bgcCanvasHelper.style.transform = 'translate(-50%, -50%) scale(1)';
 
 					setTimeout(() => {
@@ -178,8 +179,9 @@
     background-color: #fff;
     border-radius: 50%;
     transform-origin: center center;
-    transform: translate(-50%, -50%) scale(0);
-    transition: height 1s ease,width 1s ease;
+		will-change: transform;
+    transform: translate3d(-50%, -50%, 0) scale(0);
 		filter: blur(1rem);
+    transition: height 1s ease,width 1s ease;
 	}
 </style>

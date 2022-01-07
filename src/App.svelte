@@ -9,7 +9,7 @@
   import NoiseBackground from "./components/NoiseBackground.svelte";
   import CanvasDrawBackground from "./components/CanvasDrawBackground.svelte";
 	import ProjectModal from "./components/sub-components/projects/ProjectModal.svelte";
-  import { scrolledRatio } from "./helpers/stores.js";
+  import { scrolledRatio, innerHeight, innerWidth } from "./helpers/stores.js";
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -17,8 +17,23 @@
     // scroll event listener
     document.addEventListener("scroll", (e) => {
       let offset = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      scrolledRatio.update((s) => offset);
+      scrolledRatio.set(offset);
     });
+    // scroll event listener end
+
+		// domcontentloaded
+		window.addEventListener('DOMContentLoaded', (e) => {
+			innerHeight.set(window.innerHeight);
+			innerWidth.set(window.innerWidth);
+		})
+		// domcontentloaded end
+
+		// window resize
+		window.addEventListener('resize', (e) => {
+			innerHeight.set(window.innerHeight);
+			innerWidth.set(window.innerWidth);
+		})
+		// window resize end
 
 		// ********** code for smooth scrolling init **********
     gsap.registerPlugin(ScrollTrigger);

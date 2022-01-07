@@ -18,8 +18,8 @@ class MagneticElement {
 
 			if (breakDistance == 0) {
 				this.breakDistance =
-					this.element.getBoundingClientRect().width*1.2 > innerWidth*0.12 ?
-					this.element.getBoundingClientRect().width*1.2 : innerWidth*0.12;
+					this.element.getBoundingClientRect().width*1.2 > window.innerWidth*0.12 ?
+					this.element.getBoundingClientRect().width*1.2 : window.innerWidth*0.12;
 			} else {
 				this.breakDistance = breakDistance;
 			}
@@ -31,8 +31,8 @@ class MagneticElement {
 			})
 			window.addEventListener('resize', (e) => {
 				this.breakDistance =
-					this.element.getBoundingClientRect().width*1.2 > innerWidth*0.12 ?
-					this.element.getBoundingClientRect().width*1.2 : innerWidth*0.12;
+					this.element.getBoundingClientRect().width*1.2 > window.innerWidth*0.12 ?
+					this.element.getBoundingClientRect().width*1.2 : window.innerWidth*0.12;
 			})
 		} else {
 			return false

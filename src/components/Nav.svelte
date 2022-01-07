@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { scrolledRatio } from '../helpers/stores.js';
+	import { scrolledRatio, innerWidth } from '../helpers/stores.js';
 
 	let scrolledRatioInner;
 	scrolledRatio.subscribe(value => {
@@ -8,7 +8,7 @@
 	})
 
 	const scrollToProjects = () => {
-		if (window.innerWidth <= 650) {
+		if ($innerWidth <= 650) {
 			document.querySelector('#mobile-menu').classList.toggle('active');
 			document.querySelector('nav').classList.toggle('white-bg');
 			document.querySelector('body').classList.toggle('overflow-hidden');
@@ -20,7 +20,7 @@
 	}
 
 	const scrollToInformation = () => {
-		if (window.innerWidth <= 650) {
+		if ($innerWidth <= 650) {
 			document.querySelector('#mobile-menu').classList.toggle('active');
 			document.querySelector('nav').classList.toggle('white-bg');
 			document.querySelector('body').classList.toggle('overflow-hidden');
@@ -32,7 +32,7 @@
 	}
 
 	const scrollToContact = () => {
-		if (window.innerWidth <= 650) {
+		if ($innerWidth <= 650) {
 			document.querySelector('#mobile-menu').classList.toggle('active');
 			document.querySelector('nav').classList.toggle('white-bg');
 			document.querySelector('body').classList.toggle('overflow-hidden');

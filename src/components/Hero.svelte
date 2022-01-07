@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { MagneticElement } from '../helpers/magneticElement.js';
 	import { ScrollParallaxElement } from '../helpers/scrollParallax';
+  import { innerHeight, innerWidth } from "../helpers/stores.js";
 
 	const scrollToContact = () => {
 		window.scrollTo({
@@ -18,18 +19,18 @@
 	}
 
 	onMount(() => {
-		if(window.innerWidth > 650) {
+		if($innerWidth > 650) {
 			// magnetize
 			new MagneticElement('#go-to-contact-cta');
 			// magnetize end
 
 			// scroll parallax
-			new ScrollParallaxElement('#hero .cont-1 h1', 0, window.innerHeight*.2);
-			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(1)', 0, -window.innerWidth*.06, 'x');
-			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(2)', 0, -window.innerWidth*.01, 'x');
-			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(3)', 0, -window.innerWidth*.03, 'x');
-			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(4)', 0, -window.innerWidth*.09, 'x');
-			new ScrollParallaxElement('#hero .cont-2', 0, window.innerHeight*.6);
+			new ScrollParallaxElement('#hero .cont-1 h1', 0, $innerHeight*.2);
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(1)', 0, -$innerWidth*.06, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(2)', 0, -$innerWidth*.01, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(3)', 0, -$innerWidth*.03, 'x');
+			new ScrollParallaxElement('#hero .cont-1 h1 span:nth-child(4)', 0, -$innerWidth*.09, 'x');
+			new ScrollParallaxElement('#hero .cont-2', 0, $innerHeight*.6);
 			// scroll parallax end
 		}
 	})
