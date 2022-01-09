@@ -13,6 +13,8 @@
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
 
+	innerHeight.set(window.innerHeight);
+	innerWidth.set(window.innerWidth);
   onMount(() => {
     // scroll event listener
     document.addEventListener("scroll", (e) => {
