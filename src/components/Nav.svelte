@@ -160,9 +160,17 @@
 									0 0 32px rgba(0,0,0,0.05),
 									0 0 64px rgba(0,0,0,0.05);
 			background-color: rgba(255, 255, 255, .15);
-			backdrop-filter: blur(.2rem);
-			-webkit-backdrop-filter: blur(.2rem);
-			-moz-backdrop-filter: blur(.2rem);
+
+			&::after {
+				content: ' ';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(255, 255, 255, .75);
+				z-index: -1;
+			}
 		}
 
 		#mobile-menu-toggle {
