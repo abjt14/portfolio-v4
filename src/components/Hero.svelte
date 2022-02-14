@@ -53,7 +53,7 @@
 			</span>
 		</h1>
 		<button id="go-to-contact-cta" on:click={scrollToContact} class="backdrop-filter-hue-rotate">
-			Lets Work Together 👋
+			Let's Work Together 👋
 		</button>
 	</div>
 	<div class="cont-2">
