@@ -43,21 +43,21 @@
 		As an enforcer of <span>clean code</span>, <span>attention to details</span>, and <span>scalability</span>, I use the latest <span>industry approved</span> technologies, tools, and standards to deliver <span>well-engineered, semantic, and carefully-crafted applications</span>.
 	</h2>
 	<div class="tech-names">
-		<div class="name backdrop-filter-hue-rotate">HTML5</div>
-		<div class="name backdrop-filter-hue-rotate">CSS3</div>
-		<div class="name backdrop-filter-hue-rotate">Sass</div>
-		<div class="name backdrop-filter-hue-rotate">JavaScript ES6+</div>
-		<div class="name backdrop-filter-hue-rotate">GSAP</div>
-		<div class="name backdrop-filter-hue-rotate">Webpack</div>
-		<div class="name backdrop-filter-hue-rotate">Svelte</div>
-		<div class="name backdrop-filter-hue-rotate">ReactJS</div>
-		<div class="name backdrop-filter-hue-rotate">React Native</div>
-		<div class="name backdrop-filter-hue-rotate">NodeJS</div>
-		<div class="name backdrop-filter-hue-rotate">GraphQL</div>
-		<div class="name backdrop-filter-hue-rotate">MongoDB</div>
-		<div class="name backdrop-filter-hue-rotate">Shell Scripting</div>
-		<div class="name backdrop-filter-hue-rotate">Git & Github</div>
-		<div class="name backdrop-filter-hue-rotate">Figma</div>
+		<div class="name">HTML5</div>
+		<div class="name">CSS3</div>
+		<div class="name">Sass</div>
+		<div class="name">JavaScript ES6+</div>
+		<div class="name">GSAP</div>
+		<div class="name">Webpack</div>
+		<div class="name">Svelte</div>
+		<div class="name">ReactJS</div>
+		<div class="name">React Native</div>
+		<div class="name">NodeJS</div>
+		<div class="name">GraphQL</div>
+		<div class="name">MongoDB</div>
+		<div class="name">Shell Scripting</div>
+		<div class="name">Git & Github</div>
+		<div class="name">Figma</div>
 	</div>
 </div>
 
