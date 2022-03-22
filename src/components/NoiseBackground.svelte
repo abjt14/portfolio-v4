@@ -11,7 +11,7 @@
 		height: 400vh;
 		background: transparent url('/assets/images/noise/noise.png') repeat 0 0;
 		background-repeat: repeat;
-		animation: 90ms infinite noise;
+		animation: 100ms infinite noise;
 		z-index: 100;
 		pointer-events: none;
 		opacity: 1;
