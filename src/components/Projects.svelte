@@ -63,7 +63,7 @@
 				'All my previous personal projects have been built using Vanilla JavaScript, however I recently discovered Svelte and it has become my favorite way to develop web apps.',
 				'For the animations, I try to make use of CSS wherever possible to keep the web app lightweight and bundle size smaller. Although, where the animations are more complex, I used GSAP as it is a robust industry-approved animation library for JavaScript, with ample of features and really good browser support.'
 			],
-			url: 'https://www.abjt.dev/',
+			url: 'portfolio-v4-abjt14.vercel.app/',
 			images: [
 				'./assets/images/projects/portfolio-concept-4/portfolio-concept-4-1.webp',
 				'./assets/images/projects/portfolio-concept-4/portfolio-concept-4-2.webp',
@@ -81,7 +81,7 @@
 				'The approach for this website was to only make the essential information available to the user, and use it as a quick way to reach out the developer.',
 				'For the design, I made the two main sections of the page to be partially visible when the user has scrolled to top or to bottom, reducing redundancy.'
 			],
-			url: 'https://abjt14.github.io/portfolio-concept-3',
+			url: 'https://abjt14.github.io/portfolio-v3/',
 			images: [
 				'./assets/images/projects/portfolio-concept-3/portfolio-concept-3-1.webp',
 				'./assets/images/projects/portfolio-concept-3/portfolio-concept-3-2.webp',
@@ -98,7 +98,7 @@
 				'The inspiration for this portfolio website concept comes from Vercel\'s main website. The contrasting colors on a white/black background gives of an active and modern vibe.',
 				'In order to incorporate those emotions into my website, I used CSS to rotate the hue of the text across the color wheel, making the design look lively.'
 			],
-			url: 'https://abjt14.github.io/portfolio-concept-2',
+			url: 'https://abjt14.github.io/portfolio-v2',
 			images: ['./assets/images/projects/portfolio-concept-2/portfolio-concept-2-1.webp']
 		},
 	]
